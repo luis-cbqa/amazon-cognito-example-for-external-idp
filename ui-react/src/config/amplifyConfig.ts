@@ -23,7 +23,7 @@ export default {
 
       domain: autoGenConfig.cognitoDomain,
 
-      scope: ['phone', 'email', 'openid', 'profile'],
+      scope: ['openid', 'email', 'profile'],
 
       redirectSignIn: autoGenConfig.appUrl,
 

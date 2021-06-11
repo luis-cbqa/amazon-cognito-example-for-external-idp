@@ -304,8 +304,10 @@ class App extends Component<AppProps, State> {
 
   async signOut() {
     try {
-      this.setState({authState: 'signedOut', pets: null, user: null});
-      await this.apiService.forceSignOut();
+      let cognitoUser: CognitoUser = await Auth.currentAuthenticatedUser();
+      console.log(cognitoUser.getSignInUserSession());
+      // this.setState({authState: 'signedOut', pets: null, user: null});
+      // await this.apiService.forceSignOut();
     } catch (e) {
       console.log(e);
     }
